@@ -6,7 +6,7 @@ on:
      - main
 
 jobs:
-verificar:
+ verificar:
   runs-on: ubuntu-latest
   steps:
    - name: Baixar o código
@@ -20,7 +20,7 @@ verificar:
        if grep -q "Última atualização" index.html; then
         echo "✓ A página possui a informação de atualização."
         echo "✓ Pull Request validado com sucesso!"
-    else
-     echo "✗ A informação de atualização não foi encontrada."
-     exit 1
-    fi
+       else
+        echo "✗ A informação de atualização não foi encontrada."
+        exit 1
+       fi
